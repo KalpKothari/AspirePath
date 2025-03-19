@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessments - Job Elevate</title>
+    <link rel="stylesheet" href="assessments.css">
+    <script defer src="assessments.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Job Elevate</div>
+        <div class="nav-center">
+            <div class="menu-container">
+                <button class="menu-button" onclick="toggleDropdown()">Menu ▼</button>
+                <div class="dropdown" id="menuDropdown">
+                    <a href="#">Jobs</a>
+                    <a href="#">Networking</a>
+                    <a href="blogs.html">Blogs</a>
+                </div>
+            </div>
+            <a href="index.html" class="login-button">Home</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="assessment-header">
+        <h1>Upgrade Your Skills with Assessments</h1>
+        <p>Take skill-based tests, coding challenges, and personality assessments to boost your job profile.</p>
+    </header>
+
+    <!-- Assessments Section -->
+    <section class="assessments-container">
+        
+        <!-- Skill-Based Tests -->
+        <div class="assessment-card">
+            <img src="..\imgs\skill.png" alt="Skills Test">
+            <h2>Skill-Based Tests</h2>
+            <p>Test your expertise in coding, marketing, finance, and more.</p>
+            <a href="https://vervoe.com/skill-testing/" target="_blank">
+                <button class="start-btn">Start Test</button>
+            </a>
+        </div>
+
+
+        <!-- Coding Challenges -->
+        <div class="assessment-card">
+            <img src="..\imgs\code.png" alt="Coding Challenge">
+            <h2>Coding Challenges</h2>
+            <p>Practice coding problems in real-time with multiple languages.</p>
+            <a href=" https://leetcode.com/contest/ ">
+                <button class="start-btn">Start Challenge</button>
+            </a>
+        </div>
+
+        <!-- Personality Tests -->
+        <div class="assessment-card">
+            <img src="..\imgs\person.png" alt="Personality Test">
+            <h2>Personality Test</h2>
+            <p>Discover your career strengths and ideal job roles.</p>
+            <a href=" https://www.16personalities.com/free-personality-test ">
+                <button class="start-btn">Take Test</button>
+            </a>    
+        </div>
+
+         <!-- CS Fundamentals -->
+         <div class="assessment-card">
+            <img src="..\imgs\computer-science.png" alt="CS Fundamentals">
+            <h2>CS Fundamentals</h2>
+            <p>This Computer Fundamental Tutorial covers everything from basic to advanced concepts.</p>
+            <a href=" https://www.geeksforgeeks.org/computer-fundamentals-tutorial/ ">
+                <button class="start-btn">Click Here</button>
+            </a>    
+        </div>
+
+      <!-- Resume Analysis -->
+      <div class="assessment-card">
+          <img src="..\imgs\resume.png" alt="Resume Analysis">
+          <h2>ATS Resume Checker</h2>
+          <p>Get feedback on your resume and optimize for job applications.</p>
+          <a href="https://enhancv.com/resources/resume-checker/?utm_source=google&utm_medium=cpc&utm_campaign=search_resume_checker_india&utm_content=717284765201&gad_source=1&gclid=Cj0KCQjw7dm-BhCoARIsALFk4v_NQg98uuGvTtXfwa9wzYlG7dTpGlddvLzHWrfd5Th1P14WZa1gqJQaAvVnEALw_wcB">
+            <button class="start-btn">Analyze Resume</button>
+          </a>
+      </div>
+
+       <!-- Developer Roadmaps -->
+       <div class="assessment-card">
+        <img src="..\imgs\roadmap.png" alt="Developer Roadmaps">
+        <h2>Developer Roadmaps</h2>
+        <p>Roadmaps, guides and other educational content to help guide developers in their learnings.</p>
+        <a href=" https://roadmap.sh/ ">
+            <button class="start-btn">Click Here</button>
+        </a>    
+    </div>
+
+
+
+    </section>
+
+    <!-- Gamification & Leaderboard -->
+    <section class="leaderboard-section">
+        <h2>🏆 Leaderboard</h2>
+        <p>Top scorers of the month</p>
+        <ul class="leaderboard">
+            <li>🥇 John Doe - 980 Points</li>
+            <li>🥈 Jane Smith - 920 Points</li>
+            <li>🥉 Mark Wilson - 880 Points</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Job Elevate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu-button");
+    const dropdownMenu = document.querySelector(".dropdown");
+
+    menuButton.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>

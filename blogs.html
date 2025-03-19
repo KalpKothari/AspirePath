@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Job Elevate</title>
+    <link rel="stylesheet" href="blogs.css">
+    <script defer src="blogs.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Job Elevate</div>
+        <div class="nav-center">
+            <div class="menu-container">
+                <button class="menu-button" onclick="toggleDropdown()">Menu ▼</button>
+                <div class="dropdown" id="menuDropdown">
+                    <a href="#">Jobs</a>
+                    <a href="#">Networking</a>
+                    <a href="assessments.html">Assessments</a>
+                </div>
+            </div>
+            <a href="index.html" class="login-button">Home</a>
+        </div>
+    </nav>
+    
+    
+    <div class="blog-container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for blogs...">
+            <button onclick="searchBlogs()">Search</button>
+        </div>
+        
+        <div id="blog-list">
+            <script>
+                const blogArticles = [
+                    { title: "How to Ace Your Job Interview", readTime: "5 mins" },
+                    { title: "Top 10 Resume Mistakes to Avoid", readTime: "6 mins" },
+                    { title: "Best Networking Tips for Job Seekers", readTime: "4 mins" },
+                    { title: "How to Improve Your LinkedIn Profile", readTime: "7 mins" },
+                    { title: "The Future of Remote Work", readTime: "5 mins" },
+                    { title: "Skills Employers Look for in 2025", readTime: "6 mins" },
+                    { title: "How to Negotiate a Better Salary", readTime: "3 mins" }
+                ];
+
+                blogArticles.forEach(article => {
+                    document.write(`
+                        <div class="blog">
+                            <h2>${article.title}</h2>
+                            <p>Read our insights on ${article.title.toLowerCase()}.</p>
+                            <p class="estimated-time">Estimated read time: ${article.readTime}</p>
+                            <div class="buttons">
+                                <button onclick="likePost(this)">👍 Like</button>
+                                <button onclick="dislikePost(this)">👎 Dislike</button>
+                                <button class="share-btn" onclick="sharePost('${article.title}')">📤 Share</button>
+                            </div>
+                            <div class="comment-box">
+                                <textarea placeholder="Add a comment..."></textarea>
+                                <button onclick="postComment(this)">Post</button>
+                            </div>
+                            <div class="comments"></div>
+                        </div>
+                    `);
+                });
+
+                document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu-button");
+    const dropdownMenu = document.querySelector(".dropdown");
+
+    menuButton.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+});
+            </script>
+        </div>
+    </div>
+    
+    <div class="subscription">
+        <h3>Subscribe to Our Blog</h3>
+        <p>Get the latest job market updates and career advice straight to your inbox.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </div>
+</body>
+</html>

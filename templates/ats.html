@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, textarea, button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ATS Resume Checker</h2>
+        <p>Upload your resume and provide a job description to check compatibility.</p>
+        <input type="file" id="resumeFile" accept=".pdf, .docx">
+        <textarea id="jobDescription" placeholder="Enter job description here..."></textarea>
+        <button onclick="uploadResume()">Check ATS Score</button>
+        <p id="status"></p>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function uploadResume() {
+            const fileInput = document.getElementById('resumeFile');
+            const jobDescription = document.getElementById('jobDescription').value;
+            const status = document.getElementById('status');
+            const result = document.getElementById('result');
+            
+            if (!fileInput.files.length) {
+                status.innerText = "Please upload a resume.";
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+            formData.append("job_description", jobDescription);
+            
+            status.innerText = "Uploading and analyzing...";
+            result.innerText = "";
+            
+            fetch("https://your-deployed-api-url/upload", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    status.innerText = "Error: " + data.error;
+                } else {
+                    status.innerText = "Analysis complete!";
+                    result.innerText = "ATS Score and Suggestions:\n" + data.analysis;
+                }
+            })
+            .catch(error => {
+                status.innerText = "An error occurred.";
+                console.error(error);
+            });
+        }
+    </script>
+</body>
+</html>

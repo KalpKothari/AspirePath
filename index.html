@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Elevate</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Job Elevate</div>
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleDropdown()">Menu ▼</button>
+            <div class="dropdown" id="menuDropdown">
+                <a href="#">Jobs</a>
+                <a href="#">Networking</a>
+                <a href="assessments.html">Assessments</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <a href="login.html" class="login-button">Login / Sign Up</a>
+    </nav>
+    
+    <header>
+        <h1>Find Your Dream Job</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search jobs...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- 🌟 Top Hiring Companies Section -->
+    <section class="top-hiring">
+        <h2>Top Hiring Companies</h2>
+        <div class="companies">
+            <a href="https://careers.google.com/" target="_blank">
+                <img src="imgs\google.png" alt="Google">
+            </a>
+            <a href="https://careers.microsoft.com/" target="_blank">
+                <img src="imgs\microsoft.png" alt="Microsoft">
+            </a>
+            <a href="https://www.amazon.jobs/" target="_blank">
+                <img src="imgs\amazon.png" alt="Amazon">
+            </a>
+            <a href="https://www.metacareers.com/" target="_blank">
+                <img src="imgs\meta.png" alt="Meta">
+            </a>
+            <a href="https://www.apple.com/careers/" target="_blank">
+                <img src="imgs\apple.png" alt="Apple">
+            </a>
+        </div>
+    </section>
+
+    <!-- Popular Job Categories Section -->
+    <section class="job-categories">
+        <h2>Popular Job Categories</h2>
+        <div class="categories-container">
+            <div class="category">
+                <img src="imgs/tech.jpg" alt="Tech Jobs">
+                <p>Technology</p>
+            </div>
+            <div class="category">
+                <img src="imgs/market.jpg" alt="Marketing Jobs">
+                <p>Marketing</p>
+            </div>
+            <div class="category">
+                <img src="imgs/finance.jpg" alt="Finance Jobs">
+                <p>Finance</p>
+            </div>
+            <div class="category">
+                <img src="imgs/health.jpg" alt="Healthcare Jobs">
+                <p>Healthcare</p>
+            </div>
+            <div class="category">
+                <img src="imgs/consult.jpg" alt="Consulting Jobs">
+                <p>Consulting</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"This platform helped me land my dream job!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"The best job portal with great features."</p>
+                <h4>- Jane Smith</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Excellent platform for job seekers and professionals!"</p>
+                <h4>- Mark Wilson</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="imgs\job p.png" alt="About Us" class="job ele">
+            <p>We connect job seekers with top employers and provide the best tools for career growth. 
+            With AI-driven job recommendations, resume analysis, and networking opportunities, we aim to make job hunting a seamless experience. Join us and take your career to the next level.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Job Elevate. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu-button");
+    const dropdownMenu = document.querySelector(".dropdown");
+
+    menuButton.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+});
+
+    </script>
+    
+</body>
+</html>

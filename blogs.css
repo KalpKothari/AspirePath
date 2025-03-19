@@ -1,0 +1,636 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+/* Navbar 3D Depth Effect */
+nav {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    padding: 12px 20px; /* Reduced padding to prevent overflow */
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 4px solid #004494;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+/* Shift Logo to the Left */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: auto; /* Pushes navbar items towards the center */
+}
+
+.nav-center {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    align-items: center;
+}
+
+.menu-container {
+    position: relative;
+}
+
+/* Menu Button */
+.menu-button {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.menu-button:hover {
+    background: linear-gradient(135deg, #0056b3, #0084ff);
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Show dropdown */
+.dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(5px);
+    animation: fadeIn 0.4s ease-in-out, bounceDown 0.6s ease-in-out;
+}
+
+/* Dropdown Links */
+.dropdown a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: rgb(5, 4, 4);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Stylish Hover Effect for Dropdown Items */
+.dropdown a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 25px;
+    letter-spacing: 1px;
+    color: #ffcc00;
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.4);
+}
+
+/* Login Button */
+.login-button {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 102, 0, 0.3);
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #cc5200, #ff9900);
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(255, 102, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+}
+
+@keyframes bounceDown {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+/* Center Navbar Items */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centers the navigation bar */
+    display: flex;
+    justify-content: center; /* Centers items */
+    gap: 10px; /* Adjusted spacing */
+    flex-wrap: wrap;
+}
+
+/* Navbar Items */
+nav ul li {
+    margin: 0;
+}
+
+/* Navbar Links */
+nav ul li a {
+    display: inline-block;
+    padding: 10px 14px; /* Slightly reduced padding */
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Adjusted font size */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #0056b3, #0095ff);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Neon Glow + Hover Effect */
+nav ul li a:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4), 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    color: #ffcc00;
+}
+
+/* Active Link Press Effect */
+nav ul li a:active {
+    transform: translateY(3px);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Fix for Medium Screens */
+@media (max-width: 992px) { 
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Ensure buttons fit in even smaller screens */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.blog-container {
+    width: 80%;
+    margin: 40px auto;
+    margin-top: 80px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Search Bar - Glassmorphism & Glow Effect */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent glass effect */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Input Field - Soft Shadow & Focus Glow */
+.search-bar input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 123, 255, 0.7);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field - Focus Effect */
+.search-bar input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0px 0px 10px #00ffcc;
+}
+
+/* Search Button - 3D Effect & Hover Animation */
+.search-bar button {
+    padding: 12px 18px;
+    border: none;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover Effect */
+.search-bar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4), 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+/* Button Click Effect */
+.search-bar button:active {
+    transform: translateY(2px);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        padding: 15px;
+    }
+
+    .search-bar input {
+        width: 60%;
+    }
+
+    .search-bar button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        margin-top: 80px; /* Adjust spacing for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-container {
+        margin-top: 60px; /* Reduce spacing for mobile */
+    }
+}
+
+
+/* Blog Post Card - Elegant Look */
+.blog {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Gradient Border */
+.blog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #00ffcc);
+}
+
+/* Blog Title */
+.blog h2 {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+/* Blog Hover Effect - 3D Lift */
+.blog:hover {
+    background: #eef7ff;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Reading Time Style */
+.estimated-time {
+    font-style: italic;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Button Container - Spaced Layout */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Blog Buttons - Smooth Gradients */
+.buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Share Button */
+.buttons .share-btn {
+    background: linear-gradient(145deg, #28a745, #32cd32);
+    color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Share Button Hover */
+.buttons .share-btn:hover {
+    background: #32cd32;
+    box-shadow: 0px 0px 12px rgba(50, 205, 50, 0.8);
+    transform: scale(1.05);
+}
+
+/* Comment Box - Stylish Glow Effect */
+.comment-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Comment Box Glow on Focus */
+.comment-box textarea {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.3s ease-in-out;
+}
+
+/* Textarea Focus - Glow */
+.comment-box textarea:focus {
+    border-color: #00ffcc;
+    box-shadow: 0px 0px 12px rgba(0, 255, 204, 0.8);
+    background: white;
+}
+
+/* Comment Button */
+.comment-box button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Comment Button Hover */
+.comment-box button:hover {
+    background: #0056b3;
+    box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 15px;
+}
+
+/* Individual Comment Box */
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Comment Box Hover - Pop Effect */
+.comment:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(145deg, #ff0000, #cc0000);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Delete Button Hover */
+.delete-btn:hover {
+    background: #cc0000;
+    box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .blog {
+        padding: 15px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .comment-box textarea {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog {
+        margin-top: 30px;
+    }
+
+    .comment-box textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .comment-box button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+
+/* Subscription Section with Glassmorphism Effect */
+.subscription {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    font-size: 20px;
+    background: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Subscription Input - Modern Styling */
+.subscription input {
+    width: 50%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+/* Input Placeholder Color */
+.subscription input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus Effect */
+.subscription input:focus {
+    border: 2px solid #ffcc00;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Subscription Button - Gradient & Neon Glow */
+.subscription button {
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    color: #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Button Hover - Glowing Effect */
+.subscription button:hover {
+    background: #ffcc00;
+    color: #0056b3;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.9);
+    transform: scale(1.05);
+}
+
+/* Button Active - Pressed Effect */
+.subscription button:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .subscription {
+        width: 90%;
+    }
+    .subscription input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .subscription input {
+        width: 80%;
+    }
+    .subscription button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
