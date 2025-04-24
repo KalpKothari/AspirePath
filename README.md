@@ -20,7 +20,7 @@ The AspirePath homepage is designed with a **modern, user-friendly interface** t
 
 - **Featured Hiring Companies** :- Showcase of top hiring partners with interactive company logos, each linking directly to their official careers page.
 
-- **Our Facilities** :- AspirePath features a visually engaging Facilities Grid, where each section is fully clickable and represents a distinct **career interest area** — such as **Technology, Design, Marketing, Finance, and more**.
+- **Our Facilities** :- AspirePath features a visually engaging Facilities Grid, where each section represents a distinct **career interest area** — such as **Technology, Design, Marketing, Finance, and more**.
 
    Rather than simply listing categories, each facility serves as a direct gateway to relevant job opportunities. When a user clicks on a specific field, AspirePath intelligently presents curated job listings that align with that category — helping students **quickly explore roles tailored to their interests.**
 
