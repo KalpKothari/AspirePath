@@ -57,7 +57,7 @@ The AspirePath homepage is designed with a **modern, user-friendly interface** t
 
 - **Improvement Tips & Techniques** - Provides **custom resume enhancement suggestions** to make your profile stronger and more appealing to recruiters.
 
-### 💬 Message to Users
+## 💬 Message to Users
 Thank you for being a part of AspirePath.
 We appreciate your time and interest in our platform.
 Let's continue to learn, grow, and build a future full of possibilities together.
