@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - Job Elevate</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="jobs.css">
+    <script defer src="jobs.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Job Elevate</div>
+        <div class="menu-container">
+            <button class="menu-button" onclick="toggleDropdown()">Menu ▼</button>
+            <div class="dropdown" id="menuDropdown">
+                <a href="#">Networking</a>
+                <a href="resume.html">Resume Analysis</a>
+                <a href="assessments.html">Assessments</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+        </div>
+        <a href="index.html" class="login-button">Home</a>
+    </nav>
+
+    <header class="jobs-header">
+        <h1>Job Listings</h1>
+        <div class="search-container">
+            <input type="text" id="jobSearch" placeholder="Search jobs...">
+            <input type="text" id="locationSearch" placeholder="Location (City, State, Country)">
+            <button onclick="filterJobs()">Search</button>
+        </div>
+    </header>
+
+    <section class="job-list-container">
+        <div class="job-card" data-category="Technology" data-keywords="Software Engineer, Python, Java, AWS, Remote" data-location="Mumbai, Maharashtra">
+            <h3>Software Engineer</h3>
+            <p class="company">Tech Innovations Inc.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+            <p class="requirements">Experience with Python, Java, and AWS. Strong problem-solving skills required.</p>
+            <p class="posted-date">Posted: April 18, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Finance" data-keywords="Financial Analyst, Investment, Banking, CFA" data-location="New York, USA">
+            <h3>Financial Analyst</h3>
+            <p class="company">Global Finance Corp.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+            <p class="requirements">Bachelor's degree in Finance, CFA preferred. Experience in investment analysis.</p>
+            <p class="posted-date">Posted: April 15, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Consulting" data-keywords="Management Consultant, Strategy, Business Analysis" data-location="London, UK">
+            <h3>Management Consultant</h3>
+            <p class="company">Strategic Solutions Ltd.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+            <p class="requirements">Proven experience in strategy development and business analysis.</p>
+            <p class="posted-date">Posted: April 10, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Marketing" data-keywords="Marketing Manager, Digital Marketing, SEO, Social Media" data-location="Bangalore, Karnataka">
+            <h3>Marketing Manager</h3>
+            <p class="company">Digital Growth Agency</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+            <p class="requirements">Experience in digital marketing, SEO, and social media management.</p>
+            <p class="posted-date">Posted: April 19, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Healthcare" data-keywords="Registered Nurse, Healthcare, Patient Care" data-location="Los Angeles, USA">
+            <h3>Registered Nurse</h3>
+            <p class="company">City General Hospital</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+            <p class="requirements">Valid nursing license required. Experience in patient care.</p>
+            <p class="posted-date">Posted: April 12, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Technology" data-keywords="Front-end Developer, React, JavaScript, HTML, CSS" data-location="Berlin, Germany">
+            <h3>Front-end Developer</h3>
+            <p class="company">Web Solutions GmbH</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+            <p class="requirements">Proficiency in React, JavaScript, HTML, and CSS.</p>
+            <p class="posted-date">Posted: April 17, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Technology" data-keywords="Software Engineer, Python, Java, AWS, Remote" data-location="Mumbai, Maharashtra">
+            <h3>Software Engineer</h3>
+            <p class="company">Tech Innovations Inc.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra (Remote)</p>
+            <p class="requirements">Experience with Python, Java, and AWS. Strong problem-solving skills required.</p>
+            <p class="posted-date">Posted: April 18, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Finance" data-keywords="Financial Analyst, Investment, Banking, CFA" data-location="New York, USA">
+            <h3>Financial Analyst</h3>
+            <p class="company">Global Finance Corp.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+            <p class="requirements">Bachelor's degree in Finance, CFA preferred. Experience in investment analysis.</p>
+            <p class="posted-date">Posted: April 15, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Consulting" data-keywords="Management Consultant, Strategy, Business Analysis" data-location="London, UK">
+            <h3>Management Consultant</h3>
+            <p class="company">Strategic Solutions Ltd.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
+            <p class="requirements">Proven experience in strategy development and business analysis.</p>
+            <p class="posted-date">Posted: April 10, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Marketing" data-keywords="Marketing Manager, Digital Marketing, SEO, Social Media" data-location="Bangalore, Karnataka">
+            <h3>Marketing Manager</h3>
+            <p class="company">Digital Growth Agency</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</p>
+            <p class="requirements">Experience in digital marketing, SEO, and social media management.</p>
+            <p class="posted-date">Posted: April 19, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Healthcare" data-keywords="Registered Nurse, Healthcare, Patient Care" data-location="Los Angeles, USA">
+            <h3>Registered Nurse</h3>
+            <p class="company">City General Hospital</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, USA</p>
+            <p class="requirements">Valid nursing license required. Experience in patient care.</p>
+            <p class="posted-date">Posted: April 12, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Technology" data-keywords="Front-end Developer, React, JavaScript, HTML, CSS" data-location="Berlin, Germany">
+            <h3>Front-end Developer</h3>
+            <p class="company">Web Solutions GmbH</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
+            <p class="requirements">Proficiency in React, JavaScript, HTML, and CSS.</p>
+            <p class="posted-date">Posted: April 17, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Finance" data-keywords="Investment Banker, Mergers, Acquisitions, Financial Modeling" data-location="London, UK">
+            <h3>Investment Banker</h3>
+            <p class="company">Capital Investments Group</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+            <p class="requirements">Experience in mergers and acquisitions, financial modeling.</p>
+            <p class="posted-date">Posted: April 11, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Consulting" data-keywords="IT Consultant, Cloud Computing, Cybersecurity" data-location="New York, USA">
+            <h3>IT Consultant</h3>
+            <p class="company">Tech Advisory Partners</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+            <p class="requirements">Expertise in cloud computing and cybersecurity.</p>
+            <p class="posted-date">Posted: April 16, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Marketing" data-keywords="Content Writer, SEO, Blogging, Social Media" data-location="Toronto, Canada">
+            <h3>Content Writer</h3>
+            <p class="company">Global Content Solutions</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+            <p class="requirements">Proven experience in SEO writing and social media content creation.</p>
+            <p class="posted-date">Posted: April 13, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Healthcare" data-keywords="Pharmacist, Pharmacy, Patient Counseling" data-location="Chicago, USA">
+            <h3>Pharmacist</h3>
+            <p class="company">Community Pharmacy Inc.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Chicago, USA</p>
+            <p class="requirements">Valid pharmacy license and strong patient counseling skills.</p>
+            <p class="posted-date">Posted: April 14, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Technology" data-keywords="Data Scientist, Machine Learning, AI, Python, R" data-location="San Francisco, USA">
+            <h3>Data Scientist</h3>
+            <p class="company">AI Innovations Lab</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> San Francisco, USA</p>
+            <p class="requirements">Strong background in machine learning, AI, Python, and R.</p>
+            <p class="posted-date">Posted: April 20, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Finance" data-keywords="Accountant, Bookkeeping, Financial Reporting, CPA" data-location="Sydney, Australia">
+            <h3>Accountant</h3>
+            <p class="company">Precision Accounting Services</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sydney, Australia</p>
+            <p class="requirements">Experience in bookkeeping and financial reporting, CPA preferred.</p>
+            <p class="posted-date">Posted: April 09, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Consulting" data-keywords="Human Resources Consultant, Talent Acquisition, Employee Relations" data-location="Berlin, Germany">
+            <h3>Human Resources Consultant</h3>
+            <p class="company">People First Consulting</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
+            <p class="requirements">Experience in talent acquisition and employee relations.</p>
+            <p class="posted-date">Posted: April 17, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Marketing" data-keywords="Social Media Manager, Content Strategy, Analytics" data-location="Austin, USA">
+            <h3>Social Media Manager</h3>
+            <p class="company">Viral Marketing Group</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Austin, USA</p>
+            <p class="requirements">Experience in developing and executing social media content strategies and analytics.</p>
+            <p class="posted-date">Posted: April 11, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Healthcare" data-keywords="Medical Assistant, Patient Care, Clinical Support" data-location="Miami, USA">
+            <h3>Medical Assistant</h3>
+            <p class="company">HealthPlus Clinic</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, USA</p>
+            <p class="requirements">Experience in patient care and providing clinical support.</p>
+            <p class="posted-date">Posted: April 18, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Technology" data-keywords="UX Designer, User Interface, Wireframing, Prototyping" data-location="Seattle, USA">
+            <h3>UX Designer</h3>
+            <p class="company">User Experience Labs</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Seattle, USA</p>
+            <p class="requirements">Experience in user interface design, wireframing, and prototyping.</p>
+            <p class="posted-date">Posted: April 15, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Finance" data-keywords="Auditor, Internal Audit, Risk Management, Compliance" data-location="Zurich, Switzerland">
+            <h3>Auditor</h3>
+            <p class="company">Assurance & Compliance Ltd.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Zurich, Switzerland</p>
+            <p class="requirements">Experience in internal audit, risk management, and compliance.</p>
+            <p class="posted-date">Posted: April 10, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        <div class="job-card" data-category="Consulting" data-keywords="Environmental Consultant, Sustainability, Regulatory Compliance" data-location="Vancouver, Canada">
+            <h3>Environmental Consultant</h3>
+            <p class="company">Green Solutions Inc.</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Vancouver, Canada</p>
+            <p class="requirements">Expertise in sustainability and regulatory compliance.</p>
+            <p class="posted-date">Posted: April 13, 2025</p>
+            <a href="#" class="apply-button">Apply Now</a>
+        </div>
+
+        </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Job Elevate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("menuDropdown").classList.toggle("show");
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+            const menuButton = document.querySelector(".menu-button");
+            const dropdownMenu = document.getElementById("menuDropdown");
+            if (!menuButton.contains(event.target) && dropdownMenu && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove("show");
+            }
+        });
+
+        function filterJobs() {
+            const searchTerm = document.getElementById("jobSearch").value.trim().toLowerCase();
+            const locationTerm = document.getElementById("locationSearch").value.trim().toLowerCase();
+            const jobCards = document.querySelectorAll(".job-card");
+
+            jobCards.forEach(card => {
+                const title = card.querySelector("h3").textContent.toLowerCase();
+                const company = card.querySelector(".company").textContent.toLowerCase();
+                const requirements = card.querySelector(".requirements").textContent.toLowerCase();
+                const location = card.querySelector(".location").textContent.toLowerCase();
+                const keywords = card.dataset.keywords.toLowerCase();
+
+                const matchesSearch = searchTerm === "" || title.includes(searchTerm) || company.includes(searchTerm) || requirements.includes(searchTerm) || keywords.includes(searchTerm);
+                const matchesLocation = locationTerm === "" || location.includes(locationTerm);
+
+                if (matchesSearch && matchesLocation) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Function to filter jobs based on category (used when clicking on category cards)
+        function filterByCategory(category) {
+            const jobCards = document.querySelectorAll(".job-card");
+            const searchTermInput = document.getElementById("jobSearch");
+            const locationSearchInput = document.getElementById("locationSearch");
+
+            searchTermInput.value = ""; // Clear previous search
+            locationSearchInput.value = ""; // Clear previous location
+
+            jobCards.forEach(card => {
+                if (card.dataset.category.toLowerCase() === category.toLowerCase()) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Check for search term in URL on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('q');
+            const category = urlParams.get('category');
+
+            if (searchTerm) {
+                document.getElementById('jobSearch').value = searchTerm;
+                filterJobs();
+            } else if (category) {
+                filterByCategory(category);
+            }
+        });
+    </script>
+</body>
+</html>

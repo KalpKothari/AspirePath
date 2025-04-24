@@ -1,0 +1,822 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  overflow-x: hidden;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/* Navbar 3D Depth Effect */
+nav {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  padding: 12px 20px; /* Reduced padding to prevent overflow */
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 4px solid #004494;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  gap: 50px; /* Adds space between buttons */
+  margin-left: -40px; 
+}
+
+/* Shift Logo to the Left */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: auto; /* Pushes navbar items towards the center */
+ 
+  margin-left: 50px; 
+}
+
+main {
+  width: 100%;
+  max-width: 1420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero {
+  width: 100%;
+  padding: 2rem 0rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  width: 60%;
+  height: 100%;
+}
+.right {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hikeimg {
+  height: 28rem;
+  width: 20rem;
+  object-fit: cover;
+  text-align: center;
+  border: 0.2rem;
+  border-radius: 1rem;
+  object-position: center;
+}
+
+.left h1 {
+  font-size: 2.6rem;
+}
+.left p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  word-spacing: 5px;
+  display: flex;
+  line-height: 147%;
+}
+
+.below {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.below h1 {
+  font-size: 2.6rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+.members {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+.teamcard {
+  height: 24rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 0.2rem solid #555;
+  border-radius: 1rem;
+}
+.teamcard img {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.teamcard p {
+  font-size: 12px;
+  margin-bottom: 1.5rem;
+}
+.teamcard i {
+  font-size: 1.6rem;
+}
+.teamcard h1 {
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Equal spacing between cards */
+  justify-content: center; /* Centers the cards */
+}
+
+
+/* footer */
+.footer {
+  width: 100%;
+  color: #fff;
+  background-color: rgba(42, 166, 238, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 60px;
+  margin-top: 60px;
+}
+.footer-content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 90px;
+}
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+
+.footer-content-left p {
+  margin-top: 0px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer h1 {
+  font-size: 24px;
+}
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+  list-style: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.footer-content-left h2,
+.footer-content-right h2,
+.footer-content-center h2 {
+  color: white;
+  font-size: 24px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.icon-container span {
+  font-size: 14px;
+}
+.footer hr {
+  width: 100%;
+  height: 2px;
+  margin: 10px 0px;
+  background-color: white;
+  border: none;
+}
+.footer-copyright {
+  margin-bottom: 40px;
+}
+
+/*responsive styles for footer*/
+@media (max-width: 800px) {
+  .footer {
+    gap: 20px;
+    padding-top: 90px;
+    margin-top: 50px;
+  }
+  .footer-content {
+    gap: 60px;
+  }
+  .footer-content-left,
+  .footer-content-right,
+  .footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .footer-content-left p {
+    font-size: 14px;
+  }
+
+  .footer-content-left li,
+  .footer-content-right li,
+  .footer-content-center li {
+    list-style: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .footer-content-left h2,
+  .footer-content-right h2,
+  .footer-content-center h2 {
+    color: white;
+    font-size: 20px;
+  }
+  .footer-social-icons img {
+    margin-right: 25px;
+  }
+  .footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0px;
+    background-color: white;
+    border: none;
+  }
+}
+@media (max-width: 750px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
+}
+@media (max-width: 765px) {
+  .para_content {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-content-center ul {
+  padding-inline-start: 0;
+}
+.footer-content-right ul {
+  padding-inline-start: 0;
+}
+hr {
+  margin-bottom: 10px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* nav */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the logo image */
+.navbar-logo img {
+  height: auto;
+  width: 70px;
+  max-width: 100%;
+}
+
+/*nav bar*/
+nav {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0rem;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 137%;
+  cursor: pointer;
+}
+
+nav li {
+  height: auto;
+}
+
+nav a {
+  height: 100%;
+  text-decoration: none;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.login-btn {
+  background-color: #ffa03f;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 18px;
+  width: 78px;
+  height: 36px;
+  margin-right: 40px;
+}
+.login-btn a {
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+nav li:first-child {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 137%;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+nav li .toor {
+  color: #ffa03f;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 99999;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #ffa03f;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+.show {
+  transform: translateX(0);
+}
+
+.sidebar li {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+/* navigation */
+ul.main-nav {
+  margin-left: 0rem;
+}
+.main-nav {
+  width: 100%;
+  margin-left: -1rem;
+}
+
+.menu-btn {
+  display: none;
+  color: #000;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 137%;
+  cursor: pointer;
+}
+
+/*responsive*/
+@media (max-width: 850px) {
+  .hideonMobile {
+    display: none !important;
+  }
+  nav li:first-child {
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 50%;
+    cursor: pointer;
+  }
+  .menu-btn {
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .hideonMobile {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .sidebar {
+    width: 50%;
+  }
+  .newNav {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  nav {
+    padding: 0 2rem 0 1rem;
+    height: 60px;
+  }
+  nav li:first-child {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 17%;
+    cursor: pointer;
+  }
+  .menu-btn {
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  nav a {
+    padding: 0 0;
+  }
+  .sidebar {
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .sidebar a {
+    padding: 0 2rem;
+  }
+}
+
+/*responsive*/
+
+@media (max-width: 1065px) {
+  .left {
+    width: 60%;
+    height: 100%;
+  }
+  .right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hikeimg {
+    height: 22rem;
+    width: 18rem;
+    object-fit: cover;
+    text-align: center;
+    border: 0.2rem;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    object-position: center;
+  }
+
+  .left h1 {
+    font-size: 2.2rem;
+  }
+  .left p {
+    font-size: 1rem;
+    margin-top: 2rem;
+    word-spacing: 5px;
+    display: flex;
+    line-height: 147%;
+  }
+
+  .below {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .below h1 {
+    font-size: 2.2rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .teamcard {
+    height: 22rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 9rem;
+    width: 9rem;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+  }
+  .teamcard i {
+    font-size: 1.6rem;
+  }
+  .teamcard h1 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 980px) {
+  .members {
+    gap: 3rem;
+    justify-content: center;
+  }
+  .members {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+  }
+  .teamcard {
+    height: 20rem;
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 7rem;
+    width: 7rem;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+  }
+  .teamcard i {
+    font-size: 1.4rem;
+  }
+  .teamcard h1 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 890px) {
+  .members {
+    gap: 3rem;
+    justify-content: center;
+  }
+  .teamcard {
+    height: 22rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 8rem;
+    width: 8rem;
+    background-color: #000;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 830px) {
+  .right {
+    display: none;
+  }
+  .left {
+    width: 80%;
+  }
+  .teamcard {
+    height: 20rem;
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 7rem;
+    width: 7rem;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .teamcard i {
+    font-size: 1.4rem;
+  }
+  .teamcard h1 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .members {
+    gap: 2rem;
+    justify-content: center;
+  }
+  .teamcard {
+    height: 18rem;
+    width: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 6rem;
+    width: 6rem;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .teamcard i {
+    font-size: 1.2rem;
+  }
+  .teamcard h1 {
+    font-size: 1.2rem;
+
+    margin: 2rem 0 1.5rem;
+  }
+}
+@media (max-width: 555px) {
+  .left {
+    width: 80%;
+    height: 100%;
+  }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+  .left p {
+    font-size: 1rem;
+    margin-top: 2rem;
+    word-spacing: 5px;
+    display: flex;
+    line-height: 147%;
+  }
+
+  .below h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .members {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+  .teamcard {
+    height: 18rem;
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 7rem;
+    width: 7rem;
+
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+    margin-top: 0.4rem;
+  }
+  .teamcard i {
+    font-size: 1.4rem;
+  }
+  .teamcard h1 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .left h1 {
+    font-size: 1.8rem;
+  }
+  .left p {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    word-spacing: 5px;
+    display: flex;
+    line-height: 137%;
+  }
+
+  .below h1 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .members {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+  .teamcard {
+    height: 17rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 0.2rem solid #555;
+    border-radius: 1rem;
+  }
+  .teamcard img {
+    height: 6rem;
+    width: 6rem;
+
+    border-radius: 50%;
+  }
+  .teamcard p {
+    font-size: 12px;
+    margin-top: 0.4rem;
+  }
+  .teamcard i {
+    font-size: 1.2rem;
+  }
+  .teamcard h1 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}

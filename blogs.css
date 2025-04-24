@@ -19,6 +19,8 @@ nav {
     top: 0;
     z-index: 1000;
     flex-wrap: wrap;
+    gap: 50px; /* Adds space between buttons */
+    margin-left: -40px; 
 }
 
 /* Shift Logo to the Left */
@@ -26,6 +28,8 @@ nav {
     font-size: 26px;
     font-weight: bold;
     margin-right: auto; /* Pushes navbar items towards the center */
+   
+    margin-left: 50px; 
 }
 
 .nav-center {

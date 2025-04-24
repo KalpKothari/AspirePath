@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Elevate</title>
+    <title>AspirePath</title>
+    <link rel="icon" type="image/png" href="/imgs/jobp.png ">
     <link rel="stylesheet" href="index.css">
-    <script defer src="index.js"></script>
+
+    <!-- Firebase & JavaScript -->
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="authStatus.js"></script>
+    <script type="module" src="index.js" defer></script>
 </head>
 <body>
     <nav>
-        <div class="logo">Job Elevate</div>
+        <div class="logo">
+            <img src="/imgs/jobp.png " alt="AspirePath Logo" class="logo-img"> 
+            <span>AspirePath</span>
+        </div>
+    
         <div class="menu-container">
-            <button class="menu-button" onclick="toggleDropdown()">Menu ▼</button>
-            <div class="dropdown" id="menuDropdown">
-                <a href="#">Jobs</a>
+            <button class="menu-button">Menu ▼</button>
+            <div class="dropdown">
+                <a href="jobs.html">Jobs</a>
                 <a href="#">Networking</a>
                 <a href="assessments.html">Assessments</a>
                 <a href="blogs.html">Blogs</a>
+                <a href="about.html">About Us</a>
             </div>
         </div>
-        <a href="login.html" class="login-button">Login / Sign Up</a>
+        <ul class="nav-links">
+            <li id="auth-link">
+                <a href="login.html" id="login-signup-btn">Login / Sign Up</a>
+            </li>
+            <li id="user-icon" class="hidden">
+                <img src="/imgs/userpro.svg" alt="User Icon" id="circle-icon">
+            </li>
+            <li>
+                <a href="#" id="logout" class="hidden">Logout</a>
+            </li>       
+        </ul>
     </nav>
-    
+
     <header>
         <h1>Find Your Dream Job</h1>
         <div class="search-container">
-            <input type="text" placeholder="Search jobs...">
-            <button>Search</button>
+            <input type="text" id="indexSearch" placeholder="Search jobs...">
+            <button id="indexSearchButton">Search</button>
         </div>
     </header>
 
@@ -35,100 +55,136 @@
         <h2>Top Hiring Companies</h2>
         <div class="companies">
             <a href="https://careers.google.com/" target="_blank">
-                <img src="imgs\google.png" alt="Google">
+                <img src="imgs/google.png" alt="Google">
             </a>
             <a href="https://careers.microsoft.com/" target="_blank">
-                <img src="imgs\microsoft.png" alt="Microsoft">
+                <img src="imgs/microsoft.png" alt="Microsoft">
             </a>
             <a href="https://www.amazon.jobs/" target="_blank">
-                <img src="imgs\amazon.png" alt="Amazon">
+                <img src="imgs/amazon.png" alt="Amazon">
             </a>
             <a href="https://www.metacareers.com/" target="_blank">
-                <img src="imgs\meta.png" alt="Meta">
+                <img src="imgs/meta.png" alt="Meta">
             </a>
             <a href="https://www.apple.com/careers/" target="_blank">
-                <img src="imgs\apple.png" alt="Apple">
+                <img src="imgs/apple.png" alt="Apple">
             </a>
         </div>
-    </section>
 
     <!-- Popular Job Categories Section -->
     <section class="job-categories">
         <h2>Popular Job Categories</h2>
         <div class="categories-container">
-            <div class="category">
-                <img src="imgs/tech.jpg" alt="Tech Jobs">
-                <p>Technology</p>
-            </div>
-            <div class="category">
-                <img src="imgs/market.jpg" alt="Marketing Jobs">
-                <p>Marketing</p>
-            </div>
-            <div class="category">
-                <img src="imgs/finance.jpg" alt="Finance Jobs">
-                <p>Finance</p>
-            </div>
-            <div class="category">
-                <img src="imgs/health.jpg" alt="Healthcare Jobs">
-                <p>Healthcare</p>
-            </div>
-            <div class="category">
-                <img src="imgs/consult.jpg" alt="Consulting Jobs">
-                <p>Consulting</p>
-            </div>
+            <a href="jobs.html?category=Technology" class="category-link">
+                <div class="category">
+                    <img src="imgs/tech.jpg" alt="Tech Jobs">
+                    <p>Technology</p>
+                </div>
+            </a>
+            <a href="jobs.html?category=Marketing" class="category-link">
+                <div class="category">
+                    <img src="imgs/market.jpg" alt="Marketing Jobs">
+                    <p>Marketing</p>
+                </div>
+            </a>
+            <a href="jobs.html?category=Finance" class="category-link">
+                <div class="category">
+                    <img src="imgs/finance.jpg" alt="Finance Jobs">
+                    <p>Finance</p>
+                </div>
+            </a>
+            <a href="jobs.html?category=Healthcare" class="category-link">
+                <div class="category">
+                    <img src="imgs/health.jpg" alt="Healthcare Jobs">
+                    <p>Healthcare</p>
+                </div>
+            </a>
+            <a href="jobs.html?category=Consulting" class="category-link">
+                <div class="category">
+                    <img src="imgs/consult.jpg" alt="Consulting Jobs">
+                    <p>Consulting</p>
+                </div>
+            </a>
         </div>
     </section>
+ <!-- Testimonials -->
+ <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p>"This platform helped me land my dream job!"</p>
+            <h4>- John Doe</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"The best jobportal with great features."</p>
+            <h4>- Jane Smith</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Excellent platform for job seekers and professionals!"</p>
+            <h4>- Mark Wilson</h4>
+        </div>
+    </div>
+</section>
 
+<!-- About Us -->
+<div class="about-us">
+    <div class="about-container">
+        <div class="about-image-box">
+            <img src="/imgs/jobp.png " alt="About Image" class="about-img">
+        </div>
     
-
-    <section class="testimonials">
-        <h2>What Our Users Say</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-card">
-                <p>"This platform helped me land my dream job!"</p>
-                <h4>- John Doe</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"The best job portal with great features."</p>
-                <h4>- Jane Smith</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Excellent platform for job seekers and professionals!"</p>
-                <h4>- Mark Wilson</h4>
+            <!-- Right Side Text -->
+            <div class="about-text">
+                <p>Welcome to AspirePath! We are a dynamic platform dedicated to providing job opportunities
+                    for professionals across various industries. Our mission is to empower individuals by connecting them
+                    to their dream careers, offering a seamless and efficient job application process. Join us and start
+                    your journey toward success!</p>
             </div>
         </div>
-    </section>
-
-    <section class="about-us">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <img src="imgs\job p.png" alt="About Us" class="job ele">
-            <p>We connect job seekers with top employers and provide the best tools for career growth. 
-            With AI-driven job recommendations, resume analysis, and networking opportunities, we aim to make job hunting a seamless experience. Join us and take your career to the next level.</p>
-        </div>
-    </section>
+    </div>
 
     <footer class="footer">
-        <p>&copy; 2025 Job Elevate. All rights reserved.</p>
+        <p>&copy; 2025 AspirePath. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Menu Toggle -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector(".menu-button");
-    const dropdownMenu = document.querySelector(".dropdown");
+            const menuButton = document.querySelector(".menu-button");
+            const dropdownMenu = document.querySelector(".dropdown");
 
-    menuButton.addEventListener("click", function () {
-        dropdownMenu.classList.toggle("show");
-    });
+            menuButton.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("show");
+            });
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove("show");
+            document.addEventListener("click", function (event) {
+                if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove("show");
+                }
+            });
+        });
+        const indexSearchButton = document.getElementById('indexSearchButton');
+    const indexSearchInput = document.getElementById('indexSearch');
+
+    indexSearchButton.addEventListener('click', function() {
+        const searchTerm = indexSearchInput.value.trim();
+        if (searchTerm) {
+            window.location.href = `jobs.html?keyword=${encodeURIComponent(searchTerm)}`;
+        } else {
+            // Optionally, you can redirect to jobs.html without any search term
+            window.location.href = 'jobs.html';
         }
     });
-});
+
+    // Allow search on pressing Enter key in the input field
+    indexSearchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            indexSearchButton.click(); // Trigger the button click
+        }
+    });
+
 
     </script>
-    
+
 </body>
 </html>
