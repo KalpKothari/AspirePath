@@ -6,12 +6,12 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-s
 
 // ✅ Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyApUQ8M7eKDtlI2dxrdxfThg8SWq6YfBEM",
-    authDomain: "aspirepath-ba35b.firebaseapp.com",
-    projectId: "aspirepath-ba35b",
-    storageBucket: "aspirepath-ba35b.appspot.com",
-    messagingSenderId: "746266885309",
-    appId: "1:746266885309:web:0d9718383c10817c314bd4"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 // ✅ Initialize Firebase
