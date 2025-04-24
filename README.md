@@ -4,7 +4,7 @@
 
 **Your Ultimate Job Search Guide** – Where careers take shape and opportunities come to life!
 
-### *Introduction*:-
+### Introduction:-
 In today’s fast-changing job market, simply finding job listings isn't enough. **AspirePath** is designed for students and freshers who want a **strategic, skill-driven, and structured career path.** It connects users to:
 
 - **Top hiring companies**
