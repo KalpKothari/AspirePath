@@ -15,7 +15,7 @@ In today’s fast-changing job market, simply finding job listings isn't enough.
 
 Whether you're preparing for your first internship, job interview, or career shift — AspirePath helps you **prepare, grow, and succeed.**
 
-### 🏠 Smart & Seamless Homepage
+### Smart & Seamless Homepage
 The AspirePath homepage is designed with a **modern, user-friendly interface** that acts as a powerful entry point into your career journey. Key highlights include:
 
 - **Featured Hiring Companies** :- Showcase of top hiring partners with interactive company logos, each linking directly to their official careers page.
@@ -29,7 +29,7 @@ The AspirePath homepage is designed with a **modern, user-friendly interface** t
 - **Integrated Smart Job Search** :- Quickly search for available job listings using a responsive search bar with **filters for job location and type**, helping users find the most relevant opportunities in seconds.
 
 ### Features & Highlights
-**💼 Career Preparation Tools** :-
+**Career Preparation Tools** :-
 
 - **AI-Powered Resume Builder** – Craft smart resumes with strengths/weakness insights.
 
@@ -39,14 +39,14 @@ The AspirePath homepage is designed with a **modern, user-friendly interface** t
 
 - **Course Recommendations** – Get personalized learning suggestions based on your profile.
 
-### 🧠 Smart Dashboard
+### Smart Dashboard
 - Clean and intuitive dashboard to access all tools in one place.
 
 - Manage personal details, skills, and certifications.
 
 - Track your growth and readiness for opportunities.
 
-### 🤖 AI-Powered Resume Analyzer
+### AI-Powered Resume Analyzer
 - **ATS Score Calculation** - Analyzes your resume and gives an **Applicant Tracking System (ATS)** compatibility score based on real job descriptions.
 
 - **Strengths & Weaknesses Detection** - Identifies your resume’s **key highlights** and **areas for improvement** based on the job requirements.
